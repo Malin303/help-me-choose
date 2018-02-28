@@ -4,7 +4,7 @@ body{
   justify-content: center;
   align-items: center;
   margin-top: 150px;
-  background-color: #949090;
+  background-color: #BBBBBB;
 }
 
 h1{
@@ -12,7 +12,8 @@ h1{
   font-size: 25px;
   letter-spacing: 2px;
   margin-bottom: 0px;
-  font-family:sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  color: #FFEBB7;
 }
 
 input{
