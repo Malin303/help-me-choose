@@ -16,11 +16,13 @@
     </div>
     <div class="resultSection"></div>
     <button class="submit">Go!</button>
+    <button class="back">Go again!</button>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
       $(function(){
         $('.resultSection').hide()
+        $('.back').hide()
 
         var add_option = function(){
           $('.inputs').append('<input></input>')
@@ -42,12 +44,18 @@
               options.push($(this).val())
             }
           })
-
           var winner = options[Math.floor(Math.random() * options.length)]
           $('.indexHeader').text('The winner is:')
           $('.resultSection').text(winner)
+          $('.submit').hide()
+          $('.back').css('display', 'flex')
         }
         $('.submit').click(submit)
+
+        var back = function(){
+          location.reload()
+        }
+        $('.back').click(back)
       })
     </script>
   </body>
